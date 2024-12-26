@@ -1,3 +1,6 @@
+import os.path
+import sys
+
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import SpacyTextSplitter
 
@@ -46,7 +49,8 @@ if __name__ == "__main__":
     print(f"Collection created: {collection_name}")
 
     vector_store = get_vector_store(client, collection_name, embedding_model)
-    chunks = process_pdf("海尔智家股份有限公司2024年第三季度报告.pdf")
+    abs_path = os.path.abspath("海尔智家股份有限公司2024年第三季度报告.PDF")
+    chunks = process_pdf(abs_path)
     print("start adding vectors")
     vector_store.add_texts(chunks)
     print("Vectors added")
