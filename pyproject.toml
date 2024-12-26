@@ -1,0 +1,16 @@
+[project]
+name = "simple-chat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-community>=0.3.13",
+    "langchain-ollama>=0.2.2",
+    "langchain-qdrant>=0.2.0",
+    "pypdf>=5.1.0",
+    "qdrant-client>=1.12.1",
+    "sentence-transformers>=3.3.1",
+    "spacy>=3.8.3",
+    "streamlit>=1.41.1",
+]
